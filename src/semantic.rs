@@ -128,8 +128,8 @@ impl Plan {
                 return Err("Subjects must be nonempty, unique and free of controls".into());
             }
             let state = serde_json::to_vec(&case.state).map_err(|e| e.to_string())?;
-            if state.len() > MAX_STATE_BYTES || state.iter().any(|b| *b == 0) {
-                return Err("State exceeds 16 KiB or contains NUL".into());
+            if state.len() > MAX_STATE_BYTES {
+                return Err("State exceeds 16 KiB".into());
             }
             let request = json!({"model":MODEL,"state":case.state,"questions":questions.clone()});
             requests.push(serde_json::to_string(&request).map_err(|e| e.to_string())?);
