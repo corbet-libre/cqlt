@@ -3,6 +3,11 @@
 Deterministic organization and repository quality checks over saved evidence.
 A reusable Rust library, consumed by [ccid](https://github.com/corbet-libs/ccid).
 
+cqlt also owns a subordinate [Vale prose backend](docs/prose.md), including its
+writing rules, invocation protocol and stable evidence report. ccid provides
+bounded execution. [Semantic quality research](studies/semantic-quality.md)
+assesses TypeSafe AI Jev and existing tools for evidence-based judgments.
+
 ## Contract
 
 `evaluate(&Snapshot, &Policy)` is pure: no network, clock, model, filesystem or
