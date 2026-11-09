@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Deterministic organization and repository quality checks over explicit evidence"
 license = "LGPL-3.0-only WITH LGPL-3.0-linking-exception"
-repository = "https://github.com/corbet-foss/cqlt"
+repository = "https://git.corbet.ch/corbet-libre/cqlt"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }

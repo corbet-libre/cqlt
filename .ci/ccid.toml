@@ -6,3 +6,18 @@ kind = "cargo"
 actions = ["fmt", "test", "clippy"]
 all_targets = true
 toolchain = "system"
+
+[checks.verify]
+kind = "commands"
+commands = [["bash", ".ci/verify.sh"]]
+cache_tools = [["rustc", "-vV"], ["cargo", "--version"]]
+
+[render]
+render_schema = 2
+[jobs.verify]
+scheduler = "forgejo"
+runs_on = "heavy"
+checks = ["rust", "verify"]
+workflow = "ci"
+command = ["bash", ".ci/run-cached.sh"]
+events = ["manual"]
