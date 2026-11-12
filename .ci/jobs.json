@@ -2,7 +2,7 @@
   "schema": 1,
   "generator": "ccid render v1",
   "tool_revision": "",
-  "manifest_sha256": "690850f2da79690860225d204074fe1ff1fa3e8b269c6b53db46eee7aad31d22",
+  "manifest_sha256": "3458e674b482b8d7befa6cecc8a7286e12ecfee93ca12b061e175a743b5f8823",
   "jobs": {
     "verify": {
       "job": "verify",
@@ -16,7 +16,7 @@
         "bash",
         ".ci/run-cached.sh"
       ],
-      "runs_on": "heavy",
+      "runs_on": "linux",
       "events": [
         "manual"
       ],
